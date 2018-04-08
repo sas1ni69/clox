@@ -7,7 +7,7 @@ typedef enum {
   OP_RETURN,
 } OpCode; // operaton code
 
-typdef struct {
+typedef struct {
   int count; // number of elements in use
   int capacity; // number of elements we have allocated
   uint8_t* code;

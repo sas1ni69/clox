@@ -9,6 +9,6 @@
 
 15 A Virtual Machine
 --------------------
-[] 15.1 An Instruction Execution Machine
+[x] 15.1 An Instruction Execution Machine
 [] 15.2 A Value Stack Manipulator
 [] 15.3 An Arithmetic Calculator

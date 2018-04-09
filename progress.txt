@@ -1,8 +1,14 @@
 14 Chunks of Bytecode
-
+---------------------
 [x] 14.1 Bytecode?
 [x] 14.2 Getting Started
 [x] 14.3 Chunks of Instructions
-[] 14.4 Disassembling Chunks
-[] 14.5 Constants
-[] 14.6 Line Information
+[x] 14.4 Disassembling Chunks
+[x] 14.5 Constants
+[x] 14.6 Line Information
+
+15 A Virtual Machine
+--------------------
+[] 15.1 An Instruction Execution Machine
+[] 15.2 A Value Stack Manipulator
+[] 15.3 An Arithmetic Calculator

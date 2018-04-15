@@ -12,3 +12,6 @@
 [x] 15.1 An Instruction Execution Machine
 [] 15.2 A Value Stack Manipulator
 [] 15.3 An Arithmetic Calculator
+
+Stopped at 15.2.1
+http://www.craftinginterpreters.com/a-virtual-machine.html#the-vm's-stack

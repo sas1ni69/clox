@@ -24,7 +24,7 @@ void initVM();
 void freeVM();
 
 InterpretResult interpret(Chunk* chunk);
-Void push(Value value);
+void push(Value value);
 Value pop();
 
 #endif

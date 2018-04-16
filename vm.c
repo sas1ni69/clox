@@ -6,6 +6,10 @@
 
 VM vm;
 
+static void resetStack() {
+  vm.stackTop = vm.stack;
+}
+
 void initVM() {
   resetStack();
 }
@@ -22,7 +26,7 @@ static InterpretResult run() {
     printf("             ");
     for (Value* slot = vm.stack; slot < vm.stackTop; slot++) {
       printf("[");
-      printf(*slot);
+      printValue(*slot);
       printf("]");
     }
     printf("\n");
@@ -32,12 +36,16 @@ static InterpretResult run() {
     switch (instruction = READ_BYTE()) {
       case OP_CONSTANT: {
         Value constant = READ_CONSTANT();
-        push(constant)
+        push(constant);
+        break;
+      }
+      case OP_NEGATE: {
+        push(-pop());
         break;
       }
       case OP_RETURN: {
         printValue(pop());
-        printf("\n";
+        printf("\n");
         return INTERPRET_OK;
       }
     }
@@ -53,10 +61,6 @@ InterpretResult interpret(Chunk* chunk) {
 
   InterpretResult result = run();
   return result;
-}
-
-static void resetStack() {
-  vm.stackTop = vm.stack;
 }
 
 void push(Value value) {
